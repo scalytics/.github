@@ -1,29 +1,37 @@
-# Scalytics open source
+# Scalytics
 
-We build open source infrastructure for streaming data and AI agents on Kafka. Every project here is Apache 2.0 unless noted, written mostly in Go, and runs on infrastructure you control. The full overview is at [scalytics.io/open-source](https://www.scalytics.io/open-source).
+Scalytics builds governed AI agents on the Kafka you already run. Our product is [Lascaris](https://www.scalytics.io/lascaris): agents work on a mirror of your data and never change production, every action is checked against your policies first, and every decision goes to an immutable audit log. It runs in your cloud, on-premise or air-gapped. Read more: [AI agents on Kafka](https://www.scalytics.io/ai-agents-on-kafka).
 
-## Projects
+## Open source
 
-| Project | What it is | Code |
-|---|---|---|
-| [KafScale](https://kafscale.io/) | Kafka-compatible streaming that keeps the log in S3. Stateless brokers, standard Kafka clients | [KafScale/platform](https://github.com/KafScale/platform) |
-| [KafClaw](https://kafclaw.scalytics.io/) | Agent runtime in Go. Connects AI agents through Kafka topics with groups, an orchestrator, shared memory and skill routing | [KafClaw/KafClaw](https://github.com/KafClaw/KafClaw) |
-| KafGraph | Shared knowledge graph for agents. Runs as a KafScale processor and reads KafClaw group topics. Open beta | [scalytics/KafGraph](https://github.com/scalytics/KafGraph) |
-| [kafSIEM](https://www.scalytics.io/kafsiem) | Entity graph over Kafka agent traffic and OSINT feeds, with provenance back to the source record | [scalytics/kafSIEM](https://github.com/scalytics/kafSIEM) |
-| [infinimesh](https://infinimesh.org/) | Self-hosted IoT device platform: device registry, device shadow, MQTT bridge, rules and APIs | [infinimesh/core](https://github.com/infinimesh/core) |
-| Scalytics Copilot | Private AI inference with open models: vLLM, an OpenAI-compatible API, chat UI and admin panel | [scalytics/ScalyticsCopilot](https://github.com/scalytics/ScalyticsCopilot) |
-| kshark-core | Kafka connectivity diagnostics from DNS to produce and consume, with JSON reports. An example of how agents can use our tools to debug Kafka clusters | [scalytics/kshark-core](https://github.com/scalytics/kshark-core) |
-| kaf-mirror | Kafka-to-Kafka replication on franz-go with a web dashboard, REST API and CLI | [scalytics/kaf-mirror](https://github.com/scalytics/kaf-mirror) |
+| Project | What it is | Code | Site |
+|---|---|---|---|
+| KafScale | Kafka-compatible streaming that keeps your data in S3. Stateless brokers, standard Kafka clients | [KafScale/platform](https://github.com/KafScale/platform) | [kafscale.io](https://kafscale.io) |
+| KafClaw | Agent framework for Kafka in Go, for running a distributed swarm of agents | [KafClaw/KafClaw](https://github.com/KafClaw/KafClaw) | [kafclaw.scalytics.io](https://kafclaw.scalytics.io) |
+| KafGraph | Distributed graph database in Go that captures how interacting agents reflect and learn. Open beta | [scalytics/KafGraph](https://github.com/scalytics/KafGraph) | [scalytics.io/kafgraph](https://www.scalytics.io/kafgraph) |
+| kafSIEM | Entity graph platform for air-gapped defense and critical infrastructure, with Kafka-native OSINT, OT fusion and provenance on every edge | [scalytics/kafSIEM](https://github.com/scalytics/kafSIEM) | [osint.scalytics.io](https://osint.scalytics.io) |
+| kaf-mirror | Kafka replication with a real-time dashboard, anomaly and incident insights, and recovery tooling | [scalytics/kaf-mirror](https://github.com/scalytics/kaf-mirror) | [docs](https://scalytics.github.io/kaf-mirror/) |
+| kshark-core | Command-line network checker for Kafka. Tests DNS, TCP, TLS, SASL, protocol and produce/consume in one tool, with JSON output for SREs and AI agents | [scalytics/kshark-core](https://github.com/scalytics/kshark-core) | [docs](https://scalytics.github.io/kshark-core/) |
+| Scalytics Copilot | Operations stack for private AI inference with open models: vLLM, an OpenAI-compatible API, web dashboard, chat UI and admin panel | [scalytics/ScalyticsCopilot](https://github.com/scalytics/ScalyticsCopilot) | [scalytics.io/open-source](https://www.scalytics.io/open-source) |
+| infinimesh | Self-hosted IoT device layer: registry, device shadow, MQTT bridge, rules, alarms and APIs | [github.com/infinimesh](https://github.com/infinimesh) | [infinimesh.org](https://infinimesh.org) |
+| Apache Wayang | Cross-platform data processing system, a Top-Level Project of the Apache Software Foundation. Alexander Alten and Dr. Mirko Kämpf are PMC members | [apache/wayang](https://github.com/apache/wayang) | [wayang.apache.org](https://wayang.apache.org) |
 
-Our founders are the original creators of [Apache Wayang](https://wayang.apache.org/), a top-level project at the Apache Software Foundation.
-
-Some repos in this org are forks we use to send pull requests upstream. Please star, open issues and contribute in the canonical repos listed above.
+Our projects are Apache 2.0 licensed. Some repos in this org are forks we use to send pull requests upstream; please star, file issues and contribute in the canonical repos above.
 
 ## Commercial support
 
-[Lascaris](https://www.scalytics.io/lascaris) is our governed, supported platform for AI agents on live Kafka data, built on this open core. For commercial support for any of these projects, [contact us](https://www.scalytics.io/contact).
+Running KafScale or KafClaw in production? We offer commercial support and architecture help. [Contact us](https://www.scalytics.io/contact).
 
 ## Read more
 
+- [Open source at Scalytics](https://www.scalytics.io/open-source)
+- [Lascaris](https://www.scalytics.io/lascaris)
 - [AI agents on Kafka](https://www.scalytics.io/ai-agents-on-kafka)
-- [novatechflow.com](https://www.novatechflow.com/), the blog of our CTO Alexander Alten, on Kafka, streaming, IoT and agents
+- [White paper: From Sensor to Superintelligence](https://cdn.prod.website-files.com/61fd00481f4b997da0ec34e3/6ad21a17f4df8fe421585824_lascaris-white-paper-from-sensor-to-superintelligence.pdf)
+- [Blog](https://www.scalytics.io/blog)
+- [Contact](https://www.scalytics.io/contact)
+
+## People
+
+- **Alexander Alten**, CTO and co-founder: [novatechflow.com](https://www.novatechflow.com/), [GitHub](https://github.com/novatechflow), [profile](https://www.scalytics.io/author/alexander-alten)
+- **Dr. Mirko Kämpf**, CEO and co-founder: [profile](https://www.scalytics.io/author/dr-mirko-kaempf)
